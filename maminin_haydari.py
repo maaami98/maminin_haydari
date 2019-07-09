@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 ###########################################################################
-# Maminin hydrası bitmiştir :D						                      #
-# vatana millete hayırlı olsun 						                      #
-# headers kısmından headerı params kısmından gönderilcek argümanı	      #
+# Maminin haydarı bitmiştir :D	               		                  #
+# vatana millete hayırlı olsun 						  #
+# headers kısmından headerı params kısmından gönderilcek argümanı	  #
 # sınır kısmından aynı anda yapılacak deneme sayısını değiştirebilirsiniz #
 ###########################################################################
 
