@@ -14,7 +14,7 @@ sinir=100
 hatali_mesaj="Yanl\xc4\xb1\xc5\x9f" #Yanlış kelimesine karşlık geliyor
 headers = {"Content-type": "application/x-www-form-urlencoded",
             "Accept": "text/plain",
-            "PHPSESSID":"92mrl72ide5vrag3ska87ouc50"}    
+            "PHPSESSID":"sizin cookieniz "}    
 f = open("/home/user/word.txt", 'r')
 def dene(sifre,):
 	global bulundu # en püf nokta burda üstteki bi değişgene erişmek için global kulandım onun global bi değişgen olduğunu belirtiyor yoksa yeniden tanımlıyormuş python işte çok yordu beni bu :D 2 saat kadar 
