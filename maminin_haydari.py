@@ -10,7 +10,7 @@
 import threading
 import httplib,urllib
 import time
-atla=900
+atla=900 #dosyadan atlanicak kisim
 sinir=100 # aktif bağlantı
 zaman=120 #deneme süre sınırı sn cinsinden
 hatali_mesaj="Yanl\xc4\xb1\xc5\x9f" #Yanlış kelimesine karşlık geliyor
